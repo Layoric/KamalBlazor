@@ -12,3 +12,13 @@ public class HelloResponse
 {
     public required string Result { get; set; }
 }
+
+[Route("/up")]
+public class KamalUp : IGet, IReturn<KamalUpResponse>
+{
+}
+
+public class KamalUpResponse
+{
+    
+}
