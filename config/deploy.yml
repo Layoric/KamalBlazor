@@ -29,3 +29,6 @@ registry:
 # Configure builder setup.
 builder:
   arch: amd64
+
+volumes:
+ - "app_storage:/app/App_Data"
