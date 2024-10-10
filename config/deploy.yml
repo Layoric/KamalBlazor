@@ -31,4 +31,4 @@ builder:
   arch: amd64
 
 volumes:
- - ".deploy/KamalBlazor/App_Data:/app/App_Data"
+ - "/opt/docker/KamalBlazor/App_Data:/app/App_Data"

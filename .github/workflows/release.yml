@@ -62,7 +62,7 @@ jobs:
           driver-opts: image=moby/buildkit:master
 
       - name: Ensure file permissions
-        run: kamal server exec --no-interactive "mkdir -p .deploy/${{ env.repository_name }}/App_Data && chown -R 1654:1654 .deploy/${{ env.repository_name }}/App_Data"
+        run: kamal server exec --no-interactive "mkdir -p /opt/docker/${{ env.repository_name }}/App_Data && chown -R 1654:1654 /opt/docker/${{ env.repository_name }}/App_Data"
 
       - name: Migration
         run: kamal app exec --no-reuse --no-interactive --version=latest "--AppTasks=migrate"
